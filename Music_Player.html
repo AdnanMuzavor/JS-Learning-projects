@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Music_player.css">
+    <title>Document</title>
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+    <header class="head">
+      <i class="fab fa-spotify fa-3x"> Spotify Clone</i>
+      <div class="btns">
+        <div class="opt-icons" id="home"><i class="fas fa-home fa-2x"></i></div>
+
+        <div class="opt-icons" id="libry">
+          <i class="fab fa-spotify fa-2x"></i>
+        </div>
+
+        <div class="opt-icons" id="prem">
+          <i class="fas fa-volleyball-ball fa-2x"></i>
+        </div>
+      </div>
+      <div class="search">
+        <span class="search-icon"><i class="fas fa-search fa-2x"></i></span
+        ><input type="text" id="search" value="search" />
+      </div>
+    </header>
+
+    <div class="main">
+      <div class="music_container">
+        <h2 id="title">Song-name</h2>
+        <h3 id="artist">singer</h3>
+        <div class="imagecontainer">
+          <img src="music1.jpg" />
+        </div>
+        <audio src="Music/music1.mp3"></audio>
+
+        <!--Making progress bar-->
+        <div class="progressbar_container" id="progress_container">
+          <div class="progress_duration_meter">
+            <div id="current_time"></div>
+            <div id="duration"></div>
+          </div>
+          <div class="progress_div" id="progress_div">
+            <div class="progress" id="progress"></div>
+          </div>
+        </div>
+        <!-- making our own controls -->
+        <div class="music_controls">
+          <i class="fas fa-backward" id="prev" title="previous"></i>
+          <i class="fas fa-play main-button" id="play" title="Play"></i>
+          <i class="fas fa-forward" id="next" title="Next"></i>
+        </div>
+      </div>
+    </div>
+
+    <script src="Music_Player.js">
+     
+    </script>
+  </body>
+</html>

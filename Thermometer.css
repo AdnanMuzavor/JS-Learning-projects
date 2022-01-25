@@ -1,0 +1,10 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(94, 9, 9);
+  }   
+  .outerdiv{
+      margin-top: 280px;
+      font-size: 3rem;
+  }

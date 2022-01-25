@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <!-- <div id="card">
+      <article class="card">
+        <div class="card-body">
+          <img src="${data.flag}" alt="" class="card-body-img" />
+          <h1 class="card-body-title">${data.name}</h1>
+          <p class="card-body-text">capital:${data.capital}</p>
+        </div>
+        <div class="card-footer">
+          <div class="card-footer-social">
+            <h3>${data.nativeName}</h3>
+            <p>Native Language</p>
+          </div>
+          <div class="card-footer-social">
+            <h3>${data.population}</h3>
+            <p>population</p>
+          </div>
+          <div class="card-footer-social">
+            <h3>${data.demonym}</h3>
+            <p>Demonym</p>
+          </div>
+        </div>
+      </article>
+    </div> -->
+    <script>
+      const container = document.querySelector("#container"); //getting our container
+
+      const request = new XMLHttpRequest(); //creating a request
+
+      request.open("GET", "https://restcountries.eu/rest/v2/name/nepal");
+      //requesting the API ,'GET' is nused to get the API.
+
+      request.send(); //sending the request to fetch this API.
+
+      //Adding an event listener for request which will be triggered once data/API loaded
+      request.addEventListener("load", function () {
+        console.log(this.responseText);
+
+        const [data] = JSON.parse(this.responseText); //this will convert response text i.e API into JS and store it in data
+
+        //Printing this converted data
+        console.log(data);
+
+        //now you can individually use each memeber from this data
+        //capital
+        console.log(data.capital); //(O/P)=>Katmandu
+
+        //Putting html code in a variable
+        const htmlData=`<div id="card">
+      <article class="card">
+        <div class="card-body">
+          <img src="${data.flag}" alt="" class="card-body-img" />
+          <h1 class="card-body-title">${data.name}</h1>
+          <p class="card-body-text">capital:${data.capital}</p>
+        </div>
+        <div class="card-footer">
+          <div class="card-footer-social">
+            <h3>${data.nativeName}</h3>
+            <p>Native Language</p>
+          </div>
+          <div class="card-footer-social">
+            <h3>${data.population}</h3>
+            <p>population</p>
+          </div>
+          <div class="card-footer-social">
+            <h3>${data.demonym}</h3>
+            <p>Demonym</p>
+          </div>
+        </div>
+      </article>
+    </div>`;
+
+    container.insertAdjacentHTML("afterbegin",htmlData);
+      });
+
+      //Check the console,API will be fetched there.
+    </script>
+  </body>
+</html>

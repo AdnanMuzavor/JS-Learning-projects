@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(54, 54, 153);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.counter-container{
+  padding-top: 20%;
+  margin: 20px;
+  text-align: center;
+  font-size: 30px;
+  transform: translateX(-100px);
+}
+.main{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transform: translate(450px,-40px);
+}

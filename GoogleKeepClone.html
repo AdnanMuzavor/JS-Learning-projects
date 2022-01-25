@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="GoogleKeepClone.css">
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"/>
+    <title>Document</title>
+</head>
+<style>
+    .note{
+       
+        width: 400px;
+        height: 300px;
+        border: 2px solid red;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-color: whitesmoke;
+        margin: 2rem 1rem;
+    }
+.operation{
+  
+   background-color: whitesmoke;
+    position: relative;
+    left: 17rem;
+    
+}
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+    }
+    body{
+        background-color: aliceblue;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .heading{
+        width: 100vw;
+        height: 5.5rem;
+        background-color: yellow;
+        color: black;
+        box-shadow: 0px 10px 16px rgb(248, 247, 247);
+
+    }
+    .heading h1{
+        line-height: 5.8rem;
+        margin-left: 2rem;
+        font-weight: 400;
+    }
+    .add:active{
+        transform: scale(0.98);
+    }
+
+    /*button styling*/
+    .btn-div{
+        position: fixed;
+        top: 7rem;
+        right: 1rem;
+       transition: all 1s;
+        border-radius: 3px;
+        padding-top: 0.5rem 1rem;
+        cursor: pointer;
+
+    }
+    button{
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border:0;
+        vertical-align: middle;
+        text-decoration: none;
+        background: transparent;
+        padding:0;
+        font-size: inherit;
+        font-family: inherit;
+    }
+    button.learn-more{
+        width: 12rem;
+        height: auto;
+    }
+    button.learn-more .circle{
+       
+        transition: all 0.45s cubic-bezier(o.65,0,0.076,1);
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background-color: rgb(255, 0, 0);
+        border-radius: 1.625rem;
+
+    }
+    
+  .btn-div:hover .circle{
+     width: 12rem;
+  }
+ 
+    button.learn-more .circle .icon{
+       
+        transition: all 0.45s cubic-bezier(o.65,0,0.076,1);
+        position: absolute;
+        top: 0;
+        right: 4px;
+        bottom: 0;
+        margin: auto;
+        background-color: whitesmoke;
+
+    }
+    .btn-div:hover .icon.arrow{
+        opacity: 0;
+    }
+    button.learn-more .circle .icon.arrow{
+     
+        transition: all 0.45s cubic-bezier(o.65,0,0.076,1);
+        left: 0.625rem;
+        width: 1.125rem;
+        height: 0.125rem;
+        background: rgb(255, 255, 255);
+    }
+    button.learn-more .circle .icon.arrow::before{
+       
+        position: absolute;
+        content: "";
+      top:-0.32rem;
+      right: 0.0638rem;
+      width: 0.625rem;
+      height: 0.625rem;
+      border-top: 0.125rem solid whitesmoke;
+      border-right: 0.125rem solid whitesmoke;
+      transform: rotate(45deg);
+    }
+    button.learn-more .button-text{
+        transition: all 0.45s cubic-bezier(o.65,0,0.076,1);
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        right: 0; 
+    }
+   
+    .note textarea{
+        outline: none;
+        font-family: inherit;
+        font-size: 1.2rem;
+        border: none;
+        height: 30rem;
+        width: 100%;
+        padding:2rem;
+    }
+    .fa-edit,.fa-trash-alt{
+color: whitesmoke;
+padding: 1rem;
+background-color: #2ecc71;
+border-radius: 50%;
+
+    }
+    .fa-trash-alt{
+        background-color: red;
+
+    }
+
+    .fa-edit:hover{
+        background-color: whitesmoke;
+        color: #27ae68;
+    }
+    .fa-trash-alt:hover{
+        background-color: whitesmoke;
+        color:red;
+     filter:drop-shadow(0px 10px 8px whitesmoke);
+    } 
+    .main{
+         padding: 2rem;
+    }
+    .hidden{
+        display: none;
+    }
+
+</style>
+<body>
+
+<!-- PART WHICH WILL BE INITIALLY BE PRESENT -->
+
+   <div class="heading">
+       <h1><i class="fas fa-sticky-note"></i>Google Keep Clone</h1>
+   </div> 
+
+
+   <div class="btn-div">
+       <button class="learn-more" class="add" id="add">
+           <span class="circle" aria-hidden="true">
+               <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">Add note</span>
+         </button>
+        </div>
+
+    <!-- this part will be rendered dynamically with the help of javascript -->
+    <!-- <div class="note">
+        <div class="operation">
+            <button class="edit" ><i class="fas fa-edit"></i></button>
+            <button class="delete" ><i class="fas fa-trash-alt"></i></button>
+        </div>
+        <div class="main"></div>
+        <textarea class=""></textarea>
+    </div> -->
+
+
+
+ <script src="GoogleKeepClone.js">
+    
+ </script> 
+
+</body>
+
+</html>

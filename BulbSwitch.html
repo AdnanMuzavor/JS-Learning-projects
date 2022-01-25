@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+     #bulbtoggle{
+         width: 200px;
+         height: 300px;
+         transform: translate(650px,100px);
+     }
+     body{
+       background: rgb(68, 68, 175);
+       text-align: center;
+     }
+     .main-heading{
+       display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+     }
+     button{
+       text-align: center;
+       font-size: 20px;
+       background: yellow;
+       color: red;
+     }
+     button:hover{
+       background: red;
+       color: yellow;
+       transform: scale(1.1);
+     }
+    </style>
+  <body>
+    <div class="main-heading">
+      <h1>Here is a switch for you!</h1>
+      <button
+        onclick="document.getElementById('bulbtoggle').src='bulb_on.jpg' "
+      >
+        TURN ON THE BULB
+      </button>
+      <button
+        onclick="document.getElementById('bulbtoggle').src='bulb_off.jpg' "
+      >
+        TURN OFF THE BULB
+      </button>
+      <img src="bulb_off.jpg" id="bulbtoggle" />
+
+   
+    </div>
+    <script src="BulbSwitch.js">
+      
+    </script>
+    
+  </body>
+</html>

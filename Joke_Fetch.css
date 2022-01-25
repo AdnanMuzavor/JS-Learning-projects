@@ -1,0 +1,31 @@
+body{
+    background: rgb(122, 34, 7);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container{
+    border: 2px solid rgb(255, 208, 0);
+    box-shadow: 2px 6px 6px rgb(0, 0, 0);
+    background: yellow;
+    margin-top: 300px;
+    width: 400px;
+    transition: all 2s;
+    height: 180px;
+  }
+  .container:hover{
+    transform: scale(2);
+  }
+  button{
+   text-align: center;
+   font-size: 20px;
+   background: yellow;
+   margin-top: 30px;
+   color: red;
+ }
+ button:hover{
+   background: red;
+   color: yellow;
+   transform: scale(1.1);
+ }

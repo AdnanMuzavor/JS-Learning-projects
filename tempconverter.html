@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tempconverter.css" />
+    <title>Document</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <!-- return false will prevent form from getting submitted auto -->
+    <form action="#" id="tempcalc" onsubmit="calculateTemp(); return false">
+      <label for="temp">Please enter the temperature you want to convert!</label
+      ><br>
+      <input type="number" name="temp" id="temp" />
+      <!-- can be get by creating instance of input using its id and thn using that instance.value. -->
+
+  
+      <select name="temp-diff" id="temp_diff">
+        <option value="cel">Celcius</option>
+        
+        <option value="fah">Fahrenheit</option>
+        
+        <!-- this two values will get stored in the form of an array and can be get with the help of a method which youll see in JS part. -->
+        
+        </select
+      ><br />
+      <input type="submit" name="temp" /><br />
+      <span id="resultcontainer"></span>
+      <!-- result will get displayed here with help of ->innerhtml<- and instance which will be created using id -->
+    </form>
+
+    <script src="tempconverter.js"></script>
+  </body>
+</html>
